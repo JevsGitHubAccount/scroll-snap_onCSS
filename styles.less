@@ -1,0 +1,32 @@
+@width: 320px;
+@blue: blue;
+@slider-size:150px;
+
+*{
+    padding: 0;
+}
+
+.box {
+    border: 2px solid;
+    border-color: @blue;
+};
+
+.horizontal-slider{
+    height: @width/2;
+    width: @width;
+    .box();
+}
+.slider-wrapper {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scroll-padding: 5px;
+    &:last-of-type {
+        border-right: 5px solid transparent;
+    }
+}
+
+.slide{
+    margin: 5px;
+    scroll-snap-align: start;
+}
